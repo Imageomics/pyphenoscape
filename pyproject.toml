@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "phenoscape"
+version = "0.0.1"
+authors = [
+  { name="John Bradley", email="john.bradley@duke.edu" },
+]
+description = "Python package to interact with the Phenoscape Knowledgebase"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  'requests'
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "tox"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Imageomics/pyphenoscape"
+"Bug Tracker" = "https://github.com/Imageomics/pyphenoscape/issues"
+
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+pythonpath = "src"
